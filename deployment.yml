@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nodesy-app
 spec:
-  replicas: 3
+  replicas: 10
   selector:
     matchLabels:
       app: nodesy-app
@@ -18,7 +18,7 @@ spec:
         - name: nodesy-container
           image: madelekacr.azurecr.io/nodejswebapp:v1.0.0
           ports:
-            - containerPort: 3000
+            
 
 ---
 
@@ -32,5 +32,4 @@ spec:
   ports:
     - protocol: TCP
       port: 3000
-      targetPort: 3000
   type: LoadBalancer
